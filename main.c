@@ -1,4 +1,4 @@
-#define _POSIX_C_SOURCE 199309L
+#define _POSIX_C_SOURCE 200809L
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -20,13 +20,13 @@ int main(int argc, char *argv[]) {
     CSR_info csr = mat_to_csr((char *)fname);
 
 	
-    int rows = csr.nrows;
-    int nz = csr.nzcount;
-    printf("Loaded matrix:\n number of rows:%d,\n number of nonzeros:%d\n", rows, nz);
+    uint32_t rows = csr.nrows;
+    uint32_t nz = csr.nzcount;
+    printf("Loaded matrix:\n number of rows:%u,\n number of nonzeros:%u\n", rows, nz);
 	
     //Access row-pointer vector
     
-    int *labels = malloc((size_t )nz * sizeof(int));
+    uint32_t *labels = malloc((size_t )nz * sizeof(uint32_t));
     if (!labels) { fprintf(stderr, "OOM allocating labels\n");  clean_csr_vectors(csr); return 3; }
     
 

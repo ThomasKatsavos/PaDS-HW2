@@ -47,26 +47,26 @@ CSR_info mat_to_csr(char* file_name) {
 
     puts("Converting matrix to CSR format...");
     mat_sparse_t *sparse = (mat_sparse_t* )matvar->data;
-    int numrows = matvar->dims[0];   
-    int ncols = matvar->dims[1];   
-    int *row_ind =(int* ) sparse->ir;  
-    int *col_ptr =(int* ) sparse->jc;  
+    uint32_t numrows = matvar->dims[0];   
+    uint32_t ncols = matvar->dims[1];   
+    uint32_t *row_ind =(uint32_t* ) sparse->ir;  
+    uint32_t *col_ptr =(uint32_t* ) sparse->jc;  
 
     //Save row pointer and column index data in CSR_info object
     CSR_info csr;
 
-    csr.row_ptr = (int*)calloc(numrows+1, sizeof(int));
+    csr.row_ptr = (uint32_t*)calloc(numrows+1, sizeof(uint32_t));
     
     // Count nonzeros per row
-    for (int c = 0; c<ncols; c++) {
-        for (int i = col_ptr[c]; i < col_ptr[c+1]; i++) {
-            int r = row_ind[i];
+    for (uint32_t c = 0; c<ncols; c++) {
+        for (uint32_t i = col_ptr[c]; i < col_ptr[c+1]; i++) {
+            uint32_t r = row_ind[i];
             csr.row_ptr[r+1]++; 
         }
     }
 
     // Define row_ptr
-    for (int i = 0; i<numrows; i++) {
+    for (uint32_t i = 0; i<numrows; i++) {
         csr.row_ptr[i+1] += csr.row_ptr[i];
     }
 
@@ -74,18 +74,18 @@ CSR_info mat_to_csr(char* file_name) {
     csr.nzcount = csr.row_ptr[numrows];
     csr.nrows = numrows;
 
-    printf("Number of nonzeros: %d\n", csr.nzcount);
+    printf("Number of nonzeros: %u\n", csr.nzcount);
   
     //Define col_idx
-    csr.col_idx = (int* )malloc(csr.nzcount * sizeof(int));
+    csr.col_idx = (uint32_t* )malloc(csr.nzcount * sizeof(uint32_t));
     
-    int *cnt = (int*)malloc(numrows * sizeof(int));
-    for (int i = 0; i < numrows; i++){cnt[i] = csr.row_ptr[i];}
+    uint32_t *cnt = (uint32_t*)malloc(numrows * sizeof(uint32_t));
+    for (uint32_t i = 0; i < numrows; i++){cnt[i] = csr.row_ptr[i];}
 
-    for(int i=0; i<ncols; i++){
-        for(int j=col_ptr[i]; j<col_ptr[i+1]; j++){
-            int r = row_ind[j];
-	          int dest = cnt[r]++;   
+    for(uint32_t i=0; i<ncols; i++){
+        for(uint32_t j=col_ptr[i]; j<col_ptr[i+1]; j++){
+            uint32_t r = row_ind[j];
+	          uint32_t dest = cnt[r]++;   
             csr.col_idx[dest] = i; 
 	}
     }
@@ -96,7 +96,7 @@ CSR_info mat_to_csr(char* file_name) {
     Mat_Close(matfp);
 
     
-    printf("Your .mat to CSR format in .bin files conversion complete.\n");
+    printf("Your .mat to CSR format conversion complete.\n");
     
 
     return csr;

@@ -5,11 +5,11 @@ SRCS_SEQ = labelprop_seq.c
 OBJS_SEQ = labelprop_seq.o mat_to_csr_seq.o main_seq.o
 EXEC_SEQ = seq
 
-#Common source files
+#source files
 MATTOCSR = mat_to_csr.c
 MAIN = main.c
 
-#Common libraries linkage
+#libraries linkage
 HEADERS = mat_to_csr.h bfs.h
 LDFLAGS = -lmatio 
 MATIO_DIR = ${MATIO_ROOT}

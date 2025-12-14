@@ -1,0 +1,10 @@
+--- Starting Job ---
+Converting matrix to CSR format...
+Number of nonzeros: 3612134270
+Your .mat to CSR format conversion complete.
+Loaded matrix:
+ number of rows:65608366,
+ number of nonzeros:3612134270
+Coloring CC: iterations=9, time=253.169224 sec, Connected components=1
+First 20 labels (or fewer):
+1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1 18:1 19:1 20:1 

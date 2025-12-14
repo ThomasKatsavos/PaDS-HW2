@@ -1,0 +1,73 @@
+--- Starting Job ---
+MPI Tasks: 16
+Cilk Workers: 4
+--------------------
+[1765677057.627323] [cn33:1857807:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.627323] [cn33:1857807:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.627323] [cn33:1857805:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.627323] [cn33:1857805:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.627317] [cn33:1857806:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.627317] [cn33:1857806:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.627965] [cn33:1857808:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.627965] [cn33:1857808:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.640652] [cn38:1387042:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.640652] [cn38:1387042:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.640649] [cn38:1387040:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.640649] [cn38:1387040:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.640649] [cn38:1387041:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.640649] [cn38:1387041:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.641013] [cn38:1387043:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.641013] [cn38:1387043:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.644039] [cn35:3732212:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.644039] [cn35:3732212:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.644039] [cn35:3732213:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.644039] [cn35:3732213:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.644039] [cn35:3732210:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.644039] [cn35:3732210:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.644163] [cn35:3732211:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.644163] [cn35:3732211:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.669681] [cn41:3410357:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.669681] [cn41:3410357:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.669681] [cn41:3410359:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.669681] [cn41:3410359:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.669683] [cn41:3410360:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.669683] [cn41:3410360:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765677057.669681] [cn41:3410358:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765677057.669681] [cn41:3410358:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+MPI structure created, number of ranks: 16
+Rank 0: Loading matrix structure...
+Rank 0: Global matrix loaded. N=16777216, NNZ=265114400. Starting to distribute...
+Rank 1: Local rows: 1048576, NNZ: 16532363. Ready.
+Rank 2: Local rows: 1048576, NNZ: 16564854. Ready.
+Rank 3: Local rows: 1048576, NNZ: 16610785. Ready.
+Rank 4: Local rows: 1048576, NNZ: 16560255. Ready.
+Rank 5: Local rows: 1048576, NNZ: 16603100. Ready.
+Rank 6: Local rows: 1048576, NNZ: 16591455. Ready.
+Rank 7: Local rows: 1048576, NNZ: 16586548. Ready.
+Rank 8: Local rows: 1048576, NNZ: 16551206. Ready.
+Rank 9: Local rows: 1048576, NNZ: 16560402. Ready.
+Rank 10: Local rows: 1048576, NNZ: 16577465. Ready.
+Rank 11: Local rows: 1048576, NNZ: 16540198. Ready.
+Rank 12: Local rows: 1048576, NNZ: 16578628. Ready.
+Rank 13: Local rows: 1048576, NNZ: 16565452. Ready.
+Rank 14: Local rows: 1048576, NNZ: 16577111. Ready.
+Rank 0: Local rows: 1048576, NNZ: 16555476. Ready.
+Rank 15: Local rows: 1048576, NNZ: 16559102. Ready.
+Time needed for rank 1 is 11.1024529 sec, with 129 iterations.
+Converged!
+Time needed for rank 0 is 11.0572905 sec, with 129 iterations.
+Time needed for rank 15 is 11.0555139 sec, with 129 iterations.
+Time needed for rank 14 is 11.0582915 sec, with 129 iterations.
+Time needed for rank 2 is 11.0989435 sec, with 129 iterations.
+Time needed for rank 13 is 11.0638075 sec, with 129 iterations.
+Time needed for rank 3 is 11.0971468 sec, with 129 iterations.
+Time needed for rank 12 is 11.0700016 sec, with 129 iterations.
+Time needed for rank 4 is 11.0945969 sec, with 129 iterations.
+Time needed for rank 5 is 11.0902431 sec, with 129 iterations.
+Time needed for rank 10 is 11.0758152 sec, with 129 iterations.
+Time needed for rank 11 is 11.0735057 sec, with 129 iterations.
+Time needed for rank 9 is 11.0790761 sec, with 129 iterations.
+Time needed for rank 8 is 11.0861554 sec, with 129 iterations.
+Time needed for rank 6 is 11.0878981 sec, with 129 iterations.
+Time needed for rank 7 is 11.0864298 sec, with 129 iterations.
+Connected components: 2

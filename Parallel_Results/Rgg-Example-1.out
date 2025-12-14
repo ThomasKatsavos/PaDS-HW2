@@ -1,0 +1,17 @@
+--- Starting Job ---
+MPI Tasks: 2
+Cilk Workers: 4
+--------------------
+[1765675412.428497] [cn33:1854062:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765675412.428497] [cn33:1854062:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765675413.732009] [cn35:3728814:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765675413.732009] [cn35:3728814:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+MPI structure created, number of ranks: 2
+Rank 0: Loading matrix structure...
+Rank 0: Global matrix loaded. N=16777216, NNZ=265114400. Starting to distribute...
+Rank 1: Local rows: 8388608, NNZ: 132509564. Ready.
+Rank 0: Local rows: 8388608, NNZ: 132604836. Ready.
+Converged!
+Time needed for rank 0 is 11.0844256 sec, with 129 iterations.
+Time needed for rank 1 is 11.0869174 sec, with 129 iterations.
+Connected components: 2

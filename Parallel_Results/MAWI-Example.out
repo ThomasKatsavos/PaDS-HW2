@@ -1,0 +1,30 @@
+--- Starting Job ---
+MPI Tasks: 5
+Cilk Workers: 4
+--------------------
+[1765722362.693549] [cn46:2282732:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765722362.693549] [cn46:2282732:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765722362.695292] [cn33:1956199:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765722362.695292] [cn33:1956199:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765722362.707200] [cn39:2353024:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765722362.707200] [cn39:2353024:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765722362.710435] [cn42:3429143:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765722362.710435] [cn42:3429143:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765722362.711575] [cn41:3480818:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765722362.711575] [cn41:3480818:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+MPI structure created, number of ranks: 5
+Rank 0: Loading matrix structure...
+Rank 0: Global matrix loaded. N=226196185, NNZ=480047894. Starting to distribute...
+Rank 1: Local rows: 45239237, NNZ: 51906594. Ready.
+Rank 2: Local rows: 45239237, NNZ: 264978143. Ready.
+Rank 3: Local rows: 45239237, NNZ: 50542420. Ready.
+Rank 0: Local rows: 45239237, NNZ: 64050030. Ready.
+Rank 4: Local rows: 45239237, NNZ: 48570707. Ready.
+Converged!
+MPI communication time for rank 0 is approx.: 0.8104 seconds
+Time needed for rank 0 is 4.8278908 sec, with 12 iterations.
+Time needed for rank 4 is 4.8314005 sec, with 12 iterations.
+Time needed for rank 1 is 4.9546624 sec, with 12 iterations.
+Time needed for rank 3 is 4.8711935 sec, with 12 iterations.
+Time needed for rank 2 is 4.9158247 sec, with 12 iterations.
+Connected components: 3971144

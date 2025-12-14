@@ -1,0 +1,30 @@
+--- Starting Job ---
+MPI Tasks: 5
+Cilk Workers: 4
+--------------------
+[1765728775.903064] [cn33:1972870:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765728775.903064] [cn33:1972870:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765728775.904323] [cn46:2293018:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765728775.904323] [cn46:2293018:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765728775.910833] [cn41:3491460:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765728775.910833] [cn41:3491460:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765728775.924058] [cn39:2363806:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765728775.924058] [cn39:2363806:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+[1765728776.369713] [cn36:2817394:0]          parser.c:2033 UCX  WARN  unused environment variable: UCX_ROOT (maybe: UCX_PROTOS?)
+[1765728776.369713] [cn36:2817394:0]          parser.c:2033 UCX  WARN  (set UCX_WARN_UNUSED_ENV_VARS=n to suppress this warning)
+MPI structure created, number of ranks: 5
+Rank 0: Loading matrix structure...
+Rank 0: Global matrix loaded. N=214005017, NNZ=465410904. Starting to distribute...
+Rank 1: Local rows: 42801004, NNZ: 92805835. Ready.
+Rank 2: Local rows: 42801003, NNZ: 92823364. Ready.
+Rank 3: Local rows: 42801003, NNZ: 93053007. Ready.
+Rank 4: Local rows: 42801003, NNZ: 93852692. Ready.
+Rank 0: Local rows: 42801004, NNZ: 92876006. Ready.
+Converged!
+MPI communication time for rank 0 is approx.: 9.3852 seconds
+Time needed for rank 0 is 60.5775030 sec, with 164 iterations.
+Time needed for rank 4 is 60.5797913 sec, with 164 iterations.
+Time needed for rank 1 is 60.6933558 sec, with 164 iterations.
+Time needed for rank 3 is 60.6204498 sec, with 164 iterations.
+Time needed for rank 2 is 60.6582127 sec, with 164 iterations.
+Connected components: 9

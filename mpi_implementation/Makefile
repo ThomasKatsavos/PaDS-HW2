@@ -5,8 +5,9 @@ MATIO_DIR = ${MATIO_ROOT}
 OBJS = $(SRCS:.c=.o)
 CC = mpicc
 
-export OMPI_CC=/home/thomas1/opt/opencilk/bin/clang
-#/mnt/apps/custom/OpenCilk/v2.0/bin/clang
+export OMPI_CC=/mnt/apps/custom/OpenCilk/v2.0/bin/clang
+#OpenCilk in Aristotle HPC is here:
+# /mnt/apps/custom/OpenCilk/v2.0/bin/clang
 CFLAGS =  -O3 -Wno-pointer-sign
 LDFLAGS = -lmatio
 

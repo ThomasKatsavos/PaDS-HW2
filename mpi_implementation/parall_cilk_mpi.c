@@ -60,7 +60,8 @@ int coloring_cc(uint32_t global_rows, CSR_info csr, uint32_t* global_labels, int
 	int iterations =0;
 	int cilk_reducer(bool_or_identity, bool_or_reduce)changed = 1;
 	int global_changed = 1;
-
+	double mpi_call_time = 0;
+	
 	while(global_changed){
 		++iterations;
 		changed = 0;  //Reset local change variable
@@ -104,7 +105,7 @@ int coloring_cc(uint32_t global_rows, CSR_info csr, uint32_t* global_labels, int
                         
 		}
 
-
+		double start_t, end_t;
 		//Convergence check using MPI blocking synchronous command
 		MPI_Allreduce(&changed, &global_changed,1,MPI_INT, MPI_LOR, MPI_COMM_WORLD);
 
@@ -114,8 +115,11 @@ int coloring_cc(uint32_t global_rows, CSR_info csr, uint32_t* global_labels, int
 		//Communication between ranks
 		uint32_t* send_buffer = &global_labels[rows_start_idx];
 
+		start_t = MPI_Wtime();
 		//blocking and synchronous
 		MPI_Allgatherv(send_buffer, local_rows, MPI_UINT32_T, global_labels, receive_counts, dspls, MPI_UINT32_T, MPI_COMM_WORLD);
+		end_t = MPI_Wtime();
+		mpi_call_time += (end_t - start_t);
 	}
 	
 	cilk_for(uint32_t v=0; v< local_rows; v++){
@@ -134,7 +138,10 @@ int coloring_cc(uint32_t global_rows, CSR_info csr, uint32_t* global_labels, int
 
 	MPI_Allgatherv(send_buffer, local_rows, MPI_UINT32_T, global_labels, receive_counts, dspls, MPI_UINT32_T, MPI_COMM_WORLD);
 
-	if(rank==0){puts("Converged!");}
+	if(rank==0){
+		puts("Converged!");
+		printf("MPI communication time for rank 0 is approx.: %.4lf seconds\n", mpi_call_time);
+	}
 
 	//Cleaning operations
 	free(receive_counts);

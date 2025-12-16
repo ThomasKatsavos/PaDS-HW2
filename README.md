@@ -60,7 +60,10 @@ with the command <br> ``` sbatch  hpc_test_script_example.sh ```. Before that, y
 6. Run the sequential executable with this command and any .mat file:<br>
 ``` ./seq <filename_of_your_choice(.mat)> ```
 Run the sequential executable with this command and any .mat file and MPI rank count:<br>
-``` mpiexec -n <num_of_mpi_ranks> ./cilk_mpi <filename_of_your_choice(.mat)> ```
+``` mpiexec -n <num_of_mpi_ranks> ./cilk_mpi <filename_of_your_choice(.mat)> ```<br>
+The user can control the number of Cilk workers before each run with the command:<br>
+``` export CILK_NWORKERS=<preferred number> ```<br>
+e.g. ``` export CILK_NWORKERS=8 ```
 7. View the results printed in the command line.
 
 ## WARNING

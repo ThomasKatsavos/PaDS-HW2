@@ -34,7 +34,7 @@ and test it in this environment:
 1. Login to Aristotle's 'login node' from bash via SSH using EduVPN, or simply via the WebPortal and 'Open in Terminal' choice.
 2. Install the project's repository in a directory of your choice manually, or, as it is advised, using git command: <br>
 ``` git clone https://github.com/ThomasKatsavos/PaDS-HW2.git ``` <br>
-3. Download the matrices you want to test the program on using the appropriate link from [SuiteSparse website](https://suitesparse-collection-website.herokuapp.com/) for MATLAB (.mat) format with the command ``` wget <matrix link> ``` <br> . Otherwise upload from your PC manually(10GB limit!).
+3. Download the matrices you want to test the program on using the appropriate link from [SuiteSparse website](https://suitesparse-collection-website.herokuapp.com/) for MATLAB (.mat) format with the command ``` wget <matrix link> ```.<br> Otherwise upload from your PC manually(10GB limit!).
 !!! The matrix has to be in the same subdirectory with the executable AND the slurm script for its execution !!!
 
 4. Configure you node - load modules needed for the correct execution of the programs. The command for this is: <br>

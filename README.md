@@ -28,8 +28,8 @@ based on labels or printing each label's value.
 first difference we notice is that the respective file for that part, 'mat_to_csr_ompi.c', uses only rank 0 for loading and conversion and then distributes equal(as much as possible) chunks to all of them, keeping one for itself too. Then, with the piece of code inside 'parall_cilk_mpi.c', we iterate at the same time
 through all chunks using MPI and Cilk with a synchronous technique and blocking functions, a simple and safe approach. The algorithm in this implementation though is altered and enriched with Union-Find characteristics, but kept its initial iterative LP form, in order to increase speed and efficiency.
 
-## Installation and execution in Aristotle HPC
-This project and especially its MPI implementation were developed and tested around usage in HPCs like Aristotelis. The following instructions show how to install
+## Installation and execution in Aristotle-HPC
+This project and especially its MPI implementation were developed and tested around usage in HPC clusters like Aristotelis. The following instructions show how to install
 and test it in this environment:
 1. Login to Aristotle's 'login node' from bash via SSH using EduVPN, or simply via the WebPortal and 'Open in Terminal' choice.
 2. Install the project's repository in a directory of your choice manually, or, as it is advised, using git command: <br>
@@ -67,7 +67,7 @@ e.g. ``` export CILK_NWORKERS=8 ```
 7. View the results printed in the command line.
 
 ## WARNING
-The program is supposed to run big matrices like com-Friendster, as it was specially mentioned, in the Aristotelis HPC but in commercial computers too. In order to keep this interoperability trade-off, it was decided to use uint32_t data type for storing the largest integer values of the project, all of them non negative of course. This limits the size of matrices we can process to that similar with com-Friendster, but keep the memory requirements low(comparing to using 64-bit integers for even bigger matrices).  
+The program is supposed to run big matrices like com-Friendster, as it was specially mentioned, in the Aristotelis HPC cluster but in commercial computers too. In order to keep this interoperability trade-off, it was decided to use uint32_t data type for storing the largest integer values of the project, all of them non negative of course. This limits the size of matrices we can process to that similar with com-Friendster, but keep the memory requirements low(comparing to using 64-bit integers for even bigger matrices).  
 
 
 #   --- THE END ---
